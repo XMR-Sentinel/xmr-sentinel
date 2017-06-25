@@ -1,0 +1,43 @@
+{
+  "name": "xmr-sentinel",
+  "version": "1.0.0",
+  "description": "Sentinel for XMR mining nodes using xmr-stak Edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midyan/xmr-sentinel.git"
+  },
+  "keywords": [
+    "xmr",
+    "web",
+    "rpc",
+    "monero",
+    "sentinel",
+    "mining",
+    "node",
+    "lan"
+  ],
+  "author": "Yan Nunes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/midyan/xmr-sentinel/issues"
+  },
+  "homepage": "https://github.com/midyan/xmr-sentinel#readme",
+  "dependencies": {
+    "async": "^2.4.1",
+    "chai": "^4.0.2",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.4",
+    "mocha": "^3.4.2",
+    "q": "^1.5.0",
+    "unirest": "^0.5.1"
+  },
+  "devDependencies": {
+    "nock": "^9.0.13"
+  }
+}
