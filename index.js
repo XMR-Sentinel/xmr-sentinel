@@ -15,6 +15,3 @@ module.exports.hash = hash
 //
 // const result = require('./lib/result/result.js')
 // module.exports.result = result
-
-const api = require('./api/main.js')
-module.exports.api = api
