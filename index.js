@@ -10,9 +10,11 @@ module.exports.utils = utils
 const hash = require('./lib/hash/hash.js')
 module.exports.hash = hash
 
-//
 // const connection = require('./lib/connection/connection.js')
 // module.exports.connection = connection
 //
 // const result = require('./lib/result/result.js')
 // module.exports.result = result
+
+const api = require('./api/main.js')
+module.exports.api = api
