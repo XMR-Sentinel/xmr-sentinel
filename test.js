@@ -5,7 +5,10 @@ function getData() {
   main
     .hash
     .getHashDataFromNodes(nodes)
-    .then(res => main.hash.getHashSum(res))
+    .then(res => {
+      // console.log(res)
+      return main.hash.getHashSum(res)
+    })
     .then(sum => {
       setTimeout(function() {
         console.log(sum.total)
@@ -13,7 +16,7 @@ function getData() {
       }, 1000)
     })
     .catch(err => console.log(err))
-  
+
 }
 
 getData()

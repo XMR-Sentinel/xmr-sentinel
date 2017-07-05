@@ -21,8 +21,9 @@ const nodes = require(appDir + 'lib/nodes.js')
 describe('Testing hash module', () => {
   describe('getHashData Funciton', () => {
     it('should return hashData', function (done) {
+
       hash
-        .getHashData(mock.html.hashPage)
+        .getHashData(mock.html.hashPage.toString())
         .then(res => {
           var err = null
 
