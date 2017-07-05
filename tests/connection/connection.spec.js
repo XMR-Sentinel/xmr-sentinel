@@ -31,7 +31,7 @@ describe('Testing connection module', () => {
     })
     it('Should return pool connection data', function(done) {
       var err = null
-
+      function compareErrorList
       connection
         .getConnectionData(mock.html.connectionPage.toString())
         .then(res => {
@@ -39,7 +39,6 @@ describe('Testing connection module', () => {
             expect(res.poolAddress).to.be.equal(mock.poolConnectionData.poolAddress)
             expect(res.connectedSince.getTime()).to.be.equal(mock.poolConnectionData.connectedSince.getTime())
             expect(res.poolPing).to.be.equal(mock.poolConnectionData.poolPing)
-            expect(_.isEqual(res.errorList, mock.poolConnectionData.errorList)).to.be.ok
           } catch(e) {
             err = e
           }

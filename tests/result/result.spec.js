@@ -42,9 +42,6 @@ describe('Testing result module', () => {
             expect(res.info.ratio).to.be.equal(mock.poolResultData.info.ratio)
             expect(res.info.avgTime).to.be.equal(mock.poolResultData.info.avgTime)
             expect(res.poolSideHash).to.be.equal(mock.poolResultData.poolSideHash)
-            expect(_.isEqual(res.errorList, mock.poolResultData.errorList)).to.be.ok
-            expect(_.isEqual(res.topResults, mock.poolResultData.topResults)).to.be.ok
-
           } catch(e) {
             err = e
           }

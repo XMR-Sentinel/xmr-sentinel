@@ -29,21 +29,21 @@ const parsedPageObject = {
 
 const poolConnectionData = {
   poolAddress: 'teracycle.net:3333',
-  connectedSince: new Date('2017-07-04T15:17:24.000Z'),
+  connectedSince: new Date('2017-07-04 15:17:24'),
   poolPing: '200',
   errorList: [
     {
-      timeStamp: new Date('2017-07-04T00:59:15.000Z'),
+      timeStamp: new Date('2017-07-04 00:59:15'),
       type: 'CALL error',
       details: ' Timeout while waiting for a reply'
     },
     {
-      timeStamp: new Date('2017-07-04T01:01:32.000Z'),
+      timeStamp: new Date('2017-07-04 01:01:32'),
       type: 'CONNECT error',
       details: ' Connection timed out'
     },
     {
-      timeStamp: new Date('2017-07-04T18:17:14.000Z'),
+      timeStamp: new Date('2017-07-04 18:17:14'),
       type: 'RECEIVE error',
       details: ' socket closed'
     }
@@ -75,11 +75,11 @@ const poolResultData = {
     {
       type: '[NETWORK ERROR]',
       count: '1',
-      timeStamp: new Date('2017-07-04T00:59:15.000Z')
+      timeStamp: new Date('2017-07-04 00:59:15')
     },
     { type: 'Unauthenticated',
       count: '1',
-      timeStamp: new Date('2017-07-04T18:17:14.000Z')
+      timeStamp: new Date('2017-07-04 18:17:14')
     }
   ]
 }
