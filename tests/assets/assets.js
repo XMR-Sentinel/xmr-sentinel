@@ -27,6 +27,29 @@ const parsedPageObject = {
   highest: ' 284.6'
 }
 
+const poolConnectionData = {
+  poolAddress: 'teracycle.net:3333',
+  connectedSince: new Date('2017-07-04T18:17:24.000Z'),
+  poolPing: '200',
+  errorList: [
+    {
+      timeStamp: new Date('2017-07-04T00:59:15.000Z'),
+      type: 'CALL error',
+      details: ' Timeout while waiting for a reply'
+    },
+    {
+      timeStamp: new Date('2017-07-04T01:01:32.000Z'),
+      type: 'CONNECT error',
+      details: ' Connection timed out'
+    },
+    {
+      timeStamp: new Date('2017-07-04T18:17:14.000Z'),
+      type: 'RECEIVE error',
+      details: ' socket closed'
+    }
+  ]
+}
+
 const parsedNodesTotal = [
   {
     total: { '2.5s': '139.2', '60s': '161.6', '15m': undefined }
@@ -50,6 +73,7 @@ const totalHashSum = {
 module.exports = {
   parsedPageObject: parsedPageObject,
   totalHashSum: totalHashSum,
+  poolConnectionData: poolConnectionData,
   parsedNodesTotal: parsedNodesTotal,
   html: {
     hashPage: hashPage,
