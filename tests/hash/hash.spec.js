@@ -3,7 +3,6 @@ const _ = require('lodash')
 const chai = require('chai')
 const path = require('path')
 const nock = require('nock')
-const unirest = require('unirest')
 const nodeUrl = 'http://127.0.0.1:9999'
 const nodeMock = nock(nodeUrl)
 const expect = chai.expect
@@ -29,37 +28,6 @@ describe('Testing hash module', () => {
 
           try {
             if (!_.isEqual(res, mock.parsedPageObject)) throw new Error('Object is not the same')
-          } catch (e) {
-            err = e
-          }
-
-          done(err)
-        })
-        .catch(err => done(err))
-    })
-  })
-  describe('getPage Function', () => {
-    it('should return haspage', function (done) {
-      const mockOpts = {
-        html: mock.html.hashPage,
-        url: nodeUrl
-      }
-
-      const page = 'h'
-
-      const address = {
-        ip: '127.0.0.1',
-        port: '9999'
-      }
-
-      nodeMock.get('/' + page).reply(200, mockOpts.html)
-
-      utils
-        .getPage(address, page)
-        .then(res => {
-          var err = null
-          try {
-            expect(res).to.be.equal(mock.html.hashPage.toString())
           } catch (e) {
             err = e
           }

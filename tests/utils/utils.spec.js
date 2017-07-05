@@ -3,7 +3,6 @@ const _ = require('lodash')
 const chai = require('chai')
 const path = require('path')
 const nock = require('nock')
-const unirest = require('unirest')
 const nodeUrl = 'http://127.0.0.1:9999'
 const nodeMock = nock(nodeUrl)
 

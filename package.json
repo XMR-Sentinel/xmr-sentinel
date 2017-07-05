@@ -32,18 +32,18 @@
   },
   "homepage": "https://github.com/midyan/xmr-sentinel#readme",
   "dependencies": {
-    "async": "^2.4.1",
+    "async": "^2.5.0",
     "chai": "^4.0.2",
-    "cheerio": "^1.0.0-rc.1",
+    "cheerio": "^1.0.0-rc.2",
+    "combined-stream": "^1.0.5",
     "express": "^4.15.3",
     "fs": "0.0.1-security",
     "lodash": "^4.17.4",
     "mocha": "^3.4.2",
     "q": "^1.5.0",
-    "unirest": "^0.5.1"
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
-    "nock": "^9.0.13",
-    "async": "~0.9.0"
+    "nock": "^9.0.13"
   }
 }
