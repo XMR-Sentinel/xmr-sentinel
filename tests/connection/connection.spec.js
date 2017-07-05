@@ -36,12 +36,10 @@ describe('Testing connection module', () => {
         .getConnectionData(mock.html.connectionPage.toString())
         .then(res => {
           try{
-            console.log(res)
-            console.log('----')
-            console.log(mock.poolConnectionData)
-            if (!_.isEqual(res, mock.poolConnectionData)) {
-              throw new Error('Pool connection data is not parsing correctly')
-            }
+            expect(res.poolAddress).to.be.equal(mock.poolConnectionData.poolAddress)
+            expect(res.connectedSince.toString()).to.be.equal(mock.poolConnectionData.connectedSince.toString())
+            expect(res.poolPing).to.be.equal(mock.poolConnectionData.poolPing)
+            expect(_.isEqual(res.errorList, mock.poolConnectionData.errorList)).to.be.ok
           } catch(e) {
             err = e
           }

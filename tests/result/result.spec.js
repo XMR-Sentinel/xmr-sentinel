@@ -36,9 +36,15 @@ describe('Testing result module', () => {
         .getResultData(mock.html.resultPage.toString())
         .then(res => {
           try{
-            if (!_.isEqual(res, mock.poolResultData)) {
-              throw new Error('Pool result data is not parsing correctly')
-            }
+            expect(res.difficulty).to.be.equal(mock.poolResultData.difficulty)
+            expect(res.info.accepted).to.be.equal(mock.poolResultData.info.accepted)
+            expect(res.info.total).to.be.equal(mock.poolResultData.info.total)
+            expect(res.info.ratio).to.be.equal(mock.poolResultData.info.ratio)
+            expect(res.info.avgTime).to.be.equal(mock.poolResultData.info.avgTime)
+            expect(res.poolSideHash).to.be.equal(mock.poolResultData.poolSideHash)
+            expect(_.isEqual(res.errorList, mock.poolResultData.errorList)).to.be.ok
+            expect(_.isEqual(res.topResults, mock.poolResultData.topResults)).to.be.ok
+
           } catch(e) {
             err = e
           }
