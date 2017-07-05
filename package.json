@@ -9,7 +9,7 @@
     "test-hash": "./node_modules/mocha/bin/mocha --recursive tests/hash",
     "test-connection": "./node_modules/mocha/bin/mocha --recursive tests/connection",
     "test-utils": "./node_modules/mocha/bin/mocha --recursive tests/utils",
-    "test-result": "./node_modules/mocha/bin/mocha --recursive tests.result"
+    "test-result": "./node_modules/mocha/bin/mocha --recursive tests/result"
   },
   "repository": {
     "type": "git",
