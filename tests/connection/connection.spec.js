@@ -31,7 +31,7 @@ describe('Testing connection module', () => {
     })
     it('Should return pool connection data', function(done) {
       var err = null
-      function compareErrorList
+      
       connection
         .getConnectionData(mock.html.connectionPage.toString())
         .then(res => {
