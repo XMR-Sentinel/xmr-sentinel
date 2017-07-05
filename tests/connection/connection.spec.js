@@ -20,48 +20,33 @@ const mock = require(testDir + 'assets/assets.js')
 const nodes = require(appDir + 'lib/nodes.js')
 
 describe('Testing connection module', () => {
-  describe('getPoolAddress function', () => {
+  describe('getConnectionData function', () => {
     it('Should be a function', function(done) {
       var err = null
       try{
-        expect(connection.getPoolAddress).to.be.a('function')
+        expect(connection.getConnectionData).to.be.a('function')
       } catch(e) {
         err = e
       }
       done(err)
     })
-  })
-  describe('getConnectedSince function', () => {
-    it('Should be a function', function(done) {
+    it('Should return pool connection data', function(done) {
       var err = null
-      try{
-        expect(connection.getConnectedSince).to.be.a('function')
-      } catch(e) {
-        err = e
-      }
-      done(err)
-    })
-  })
-  describe('getPoolPing function', () => {
-    it('Should be a function', function(done) {
-      var err = null
-      try{
-        expect(connection.getPoolPing).to.be.a('function')
-      } catch(e) {
-        err = e
-      }
-      done(err)
-    })
-  })
-  describe('getErrorList function', () => {
-    it('Should be a function', function(done) {
-      var err = null
-      try{
-        expect(connection.getErrorList).to.be.a('function')
-      } catch(e) {
-        err = e
-      }
-      done(err)
+
+      connection
+        .getConnectionData(mock.html.connectionPage.toString())
+        .then(res => {
+          try{
+            if (!_.isEqual(res, mock.poolConnectionData)) {
+              throw new Error('Pool connection data is not parsing correctly')
+            }
+          } catch(e) {
+            err = e
+          }
+          done(err)
+        })
+        .catch(err => done(err))
+
     })
   })
 })
