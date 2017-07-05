@@ -36,6 +36,10 @@ describe('Testing connection module', () => {
         .getConnectionData(mock.html.connectionPage.toString())
         .then(res => {
           try{
+            console.log(res.connectedSince.getTime())
+            console.log(mock.poolConnectionData.connectedSince.getTime())
+            console.log(res.connectedSince
+            console.log(mock.poolConnectionData.connectedSince)
             expect(res.poolAddress).to.be.equal(mock.poolConnectionData.poolAddress)
             expect(res.connectedSince.getTime()).to.be.equal(mock.poolConnectionData.connectedSince.getTime())
             expect(res.poolPing).to.be.equal(mock.poolConnectionData.poolPing)
