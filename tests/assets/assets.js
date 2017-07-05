@@ -29,7 +29,7 @@ const parsedPageObject = {
 
 const poolConnectionData = {
   poolAddress: 'teracycle.net:3333',
-  connectedSince: new Date('2017-07-04T18:17:24.000Z'),
+  connectedSince: new Date('2017-07-04T15:17:24.000Z'),
   poolPing: '200',
   errorList: [
     {
