@@ -37,7 +37,7 @@ describe('Testing connection module', () => {
         .then(res => {
           try{
             expect(res.poolAddress).to.be.equal(mock.poolConnectionData.poolAddress)
-            expect(res.connectedSince.toString()).to.be.equal(mock.poolConnectionData.connectedSince.toString())
+            expect(res.connectedSince.getTime()).to.be.equal(mock.poolConnectionData.connectedSince.getTime())
             expect(res.poolPing).to.be.equal(mock.poolConnectionData.poolPing)
             expect(_.isEqual(res.errorList, mock.poolConnectionData.errorList)).to.be.ok
           } catch(e) {
