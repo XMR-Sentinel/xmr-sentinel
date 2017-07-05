@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const appDir = (path.resolve(__dirname) + '/').replace('lib/testAssets/', '')
+const appDir = (path.resolve(__dirname) + '/').replace('tests/assets/', '')
 const mainFile = require(appDir + 'index.js')
 
 const hashPage = fs.readFileSync(appDir + 'sample-pages/Hashrate Report.html')

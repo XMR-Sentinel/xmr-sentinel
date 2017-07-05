@@ -4,7 +4,7 @@
   "description": "Sentinel for XMR mining nodes using xmr-stak Edit",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive lib"
+    "test": "./node_modules/mocha/bin/mocha --recursive tests"
   },
   "repository": {
     "type": "git",

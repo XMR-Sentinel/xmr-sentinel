@@ -6,15 +6,17 @@ const nock = require('nock')
 const unirest = require('unirest')
 const nodeUrl = 'http://127.0.0.1:9999'
 const nodeMock = nock(nodeUrl)
+const expect = chai.expect
 
-const appDir = (path.resolve(__dirname) + '/').replace('lib/hash/', '')
-const libDir = (path.resolve(__dirname) + '/').replace('hash/', '')
+const appDir = (path.resolve(__dirname) + '/').replace('tests/hash/', '')
+const testDir = (path.resolve(__dirname) + '/').replace('hash/', '')
 
 const mainFile = require(appDir + 'index.js')
+
 const hash = mainFile.hash
 const utils = mainFile.utils
 
-const mock = require(libDir + 'testAssets/assets.js')
+const mock = require(testDir + 'assets/assets.js')
 const nodes = require(appDir + 'lib/nodes.js')
 
 describe('Testing has module', () => {
@@ -53,12 +55,11 @@ describe('Testing has module', () => {
       nodeMock.get('/' + page).reply(200, mockOpts.html)
 
       utils
-        .getPage(address, 'h')
+        .getPage(address, page)
         .then(res => {
           var err = null
-
           try {
-
+            expect(res).to.be.equal(mock.html.hashPage.toString())
           } catch (e) {
             err = e
           }

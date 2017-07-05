@@ -7,13 +7,13 @@ const unirest = require('unirest')
 const nodeUrl = 'http://127.0.0.1:9999'
 const nodeMock = nock(nodeUrl)
 
-const appDir = (path.resolve(__dirname) + '/').replace('lib/utils/', '')
-const libDir = (path.resolve(__dirname) + '/').replace('utils/', '')
+const appDir = (path.resolve(__dirname) + '/').replace('tests/utils/', '')
+const testDir = (path.resolve(__dirname) + '/').replace('utils/', '')
 
 const mainFile = require(appDir + 'index.js')
 const utils = mainFile.utils
 
-const mock = require(libDir + 'testAssets/assets.js')
+const mock = require(testDir + 'assets/assets.js')
 
 describe('Testing utils module', () => {
   describe('getPage Function', () => {
