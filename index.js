@@ -8,11 +8,10 @@ const utils = require('./lib/utils/utils.js')
 module.exports.utils = utils
 
 const hash = require('./lib/hash/hash.js')
-console.log(hash)
 module.exports.hash = hash
 
 const connection = require('./lib/connection/connection.js')
 module.exports.connection = connection
-//
-// const result = require('./lib/result/result.js')
-// module.exports.result = result
+
+const result = require('./lib/result/result.js')
+module.exports.result = result
