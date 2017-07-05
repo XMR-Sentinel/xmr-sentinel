@@ -19,7 +19,7 @@ const utils = mainFile.utils
 const mock = require(testDir + 'assets/assets.js')
 const nodes = require(appDir + 'lib/nodes.js')
 
-describe('Testing has module', () => {
+describe('Testing hash module', () => {
   describe('getHashData Funciton', () => {
     it('should return hashData', function (done) {
       hash
