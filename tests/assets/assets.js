@@ -50,6 +50,40 @@ const poolConnectionData = {
   ]
 }
 
+const poolResultData = {
+  topResults: [
+    2734373,
+    2405439,
+    2053667,
+    1754534,
+    1259584,
+    981937,
+    848184,
+    785344,
+    701907,
+    695705
+  ],
+  difficulty: 24154,
+  info: {
+    accepted: 1078,
+    total: 1080,
+    ratio: 0.9981,
+    avgTime: 143.2
+  },
+  poolSideHash: 3728516,
+  errorList: [
+    {
+      type: '[NETWORK ERROR]',
+      count: '1',
+      timeStamp: new Date('2017-07-04T00:59:15.000Z')
+    },
+    { type: 'Unauthenticated',
+      count: '1',
+      timeStamp: new Date('2017-07-04T18:17:14.000Z')
+    }
+  ]
+}
+
 const parsedNodesTotal = [
   {
     total: { '2.5s': '139.2', '60s': '161.6', '15m': undefined }
@@ -74,6 +108,7 @@ module.exports = {
   parsedPageObject: parsedPageObject,
   totalHashSum: totalHashSum,
   poolConnectionData: poolConnectionData,
+  poolResultData: poolResultData,
   parsedNodesTotal: parsedNodesTotal,
   html: {
     hashPage: hashPage,
