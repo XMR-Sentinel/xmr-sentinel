@@ -36,6 +36,9 @@ describe('Testing connection module', () => {
         .getConnectionData(mock.html.connectionPage.toString())
         .then(res => {
           try{
+            console.log(res)
+            console.log('----')
+            console.log(mock.poolConnectionData)
             if (!_.isEqual(res, mock.poolConnectionData)) {
               throw new Error('Pool connection data is not parsing correctly')
             }
