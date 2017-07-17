@@ -81,7 +81,7 @@ describe('Testing hash module', () => {
         .getHashSum(mock.parsedNodesTotal)
         .then(res => {
           var err = null
-
+          
           try {
             if (!_.isEqual(res, mock.totalHashSum)) throw new Error('Total is not as expected')
           } catch(e) {
